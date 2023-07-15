@@ -1,67 +1,36 @@
 package Server;
 
-import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import Clinet.Clinet;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
-public class server {
-    public JFXTextField mgTxt;
-    public Button sendBtn;
-    public TextArea displayTxtArea;
+public class Server {
+    private ServerSocket serverSocket;
+    private Socket socket;
+    private static Server server;
+    private List<Clinet> clinets = new ArrayList<>();
 
-    ServerSocket serverSocket;
-    Socket socket;
-    DataInputStream dataInputStream;
-    DataOutputStream dataOutputStream;
-    String message="";
+    private Server() throws IOException {
+        serverSocket = new ServerSocket(3002);
+    }
 
-    @FXML
-    void initialize() {
-        new Thread(() -> {
+    public static Server getInstance() throws IOException {
+        return server!=null? server:(server=new Server());
+    }
+
+    public void  makeSocket(){
+        while (!serverSocket.isClosed()){
             try {
-                serverSocket = new ServerSocket(3002);
-                displayTxtArea.appendText("Server.Server Is Started"+"\n");
-
                 socket = serverSocket.accept();
-                displayTxtArea.appendText("Client.Client Accept"+"\n");
-
-                dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-
-                while (!message.equals("finish")){
-                    message = dataInputStream.readUTF();
-                    displayTxtArea.appendText("client : " + message+"\n");
-
-                }
-
+                Clinet clinet = new Clinet(socket,clinets);
+                clinets.add(clinet);
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
-        }).start();
-
-    }
-
-    public void mgTxtOnAction(ActionEvent actionEvent) {
-        sendBtnOnAction(actionEvent);
-    }
-
-    public void sendBtnOnAction(ActionEvent actionEvent) {
-        try {
-            displayTxtArea.appendText("Server.Server :" + mgTxt.getText()+"\n");
-            dataOutputStream.writeUTF(mgTxt.getText());
-            dataOutputStream.flush();
-            mgTxt.setText("");
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-
     }
-
 }
