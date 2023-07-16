@@ -29,7 +29,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import static Controller.ServerFormController.receiveMessage;
-
 public class ClinetFormController {
 
     @FXML
