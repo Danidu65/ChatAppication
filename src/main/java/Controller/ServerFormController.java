@@ -25,7 +25,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-
 public class ServerFormController {
 
 
