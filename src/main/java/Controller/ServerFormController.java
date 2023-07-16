@@ -1,5 +1,4 @@
 package Controller;
-
 import Server.Server;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
