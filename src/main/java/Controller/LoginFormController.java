@@ -11,7 +11,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
 public class LoginFormController {
     @FXML
     private AnchorPane root;
