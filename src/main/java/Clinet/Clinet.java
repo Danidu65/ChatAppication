@@ -36,7 +36,6 @@ public class Clinet {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                
             }
         });
     }
