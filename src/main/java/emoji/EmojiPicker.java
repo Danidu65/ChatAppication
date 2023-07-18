@@ -1,12 +1,10 @@
 package emoji;
-
 import com.vdurmont.emoji.EmojiParser;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
 import java.util.ArrayList;
 import java.util.List;
 
