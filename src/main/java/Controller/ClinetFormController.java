@@ -18,7 +18,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-
 import java.awt.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
