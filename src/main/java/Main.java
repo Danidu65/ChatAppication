@@ -3,7 +3,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
