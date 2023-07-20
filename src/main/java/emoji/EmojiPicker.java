@@ -8,7 +8,6 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 import java.util.List;
 public class EmojiPicker extends VBox {
-
     private ListView<String> emojiListView;
 
     public EmojiPicker() {
