@@ -4,7 +4,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.List;
-
 public class Clinet {
     private Socket socket;
     private List<Clinet> clinets;
