@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.net.Socket;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-
 import static Controller.ServerFormController.receiveMessage;
 public class ClinetFormController {
 
