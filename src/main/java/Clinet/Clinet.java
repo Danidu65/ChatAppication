@@ -11,7 +11,6 @@ public class Clinet {
     private DataInputStream dataInputStream;
     private DataOutputStream dataOutputStream;
     private String msg = "";
-
     public Clinet(Socket socket, List<Clinet> clinets) {
     try {
         this.socket = socket;
