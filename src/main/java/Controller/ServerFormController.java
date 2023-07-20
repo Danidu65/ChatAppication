@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 public class ServerFormController {
-
     @FXML
     private AnchorPane root;
 
