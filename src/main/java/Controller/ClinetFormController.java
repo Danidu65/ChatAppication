@@ -122,7 +122,6 @@ public class ClinetFormController {
             emojiPicker.setVisible(false);
         });
     }
-
     public void txtMsgOnAction(ActionEvent actionEvent) {
         sendButtonOnAction(actionEvent);
     }
