@@ -24,7 +24,6 @@ public class EmojiPicker extends VBox {
         for (String em:emojiHtmlList) {
             emojis.add(EmojiParser.parseToUnicode(em));
         }
-
         // Create the emoji list view
         emojiListView = new ListView<>();
         emojiListView.setItems(FXCollections.observableArrayList(emojis));
