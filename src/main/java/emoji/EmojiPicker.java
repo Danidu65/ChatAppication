@@ -41,5 +41,4 @@ public class EmojiPicker extends VBox {
     public ListView<String> getEmojiListView() {
         return emojiListView;
     }
-
 }
