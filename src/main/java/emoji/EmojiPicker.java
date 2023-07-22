@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 public class EmojiPicker extends VBox {
     private ListView<String> emojiListView;
-
     public EmojiPicker() {
         // Load the emoji images
         List<String> emojis = new ArrayList<>();
