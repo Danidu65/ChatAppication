@@ -82,7 +82,6 @@ public class ClinetFormController {
         });
 
         emoji();
-
     }
 
     public void shutdown() {
