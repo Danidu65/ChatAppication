@@ -173,7 +173,6 @@ public class ClinetFormController {
             }
         }
     }
-
     private void sendImage(String msgToSend) {
         Image image = new Image(msgToSend);
         ImageView imageView = new ImageView(image);
