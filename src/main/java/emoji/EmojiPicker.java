@@ -38,7 +38,6 @@ public class EmojiPicker extends VBox {
         // Set the picker hBox to the EmojiPicker
         getChildren().add(hBox);
     }
-
     public ListView<String> getEmojiListView() {
         return emojiListView;
     }
